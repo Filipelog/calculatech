@@ -78,6 +78,15 @@ function Index() {
           </div>
         </Section>
 
+        <div className="flex justify-center">
+          <button
+            onClick={() => import("@/lib/report-pdf").then((m) => m.downloadReport(dims.c, dims.w))}
+            className="rounded-xl border-2 border-primary px-6 py-3 font-semibold text-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            GERAR RELATÓRIO PDF
+          </button>
+        </div>
+
         <Results opt={opt} dims={dims} />
         <Chart opt={opt} dims={dims} xSel={xSel} setXSel={setXSel} />
         <Simulator opt={opt} dims={dims} xSel={xSel} setXSel={setXSel} />
